@@ -1,13 +1,17 @@
 puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
 print "> "
 user_number = gets.chomp.to_i
-i = 0
-while i < user_number
-	j = 0
-	while j < i
-		print "#"
-		j = j + 1
+if user_number >= 1 && user_number <= 25
+	i = 0
+	while i < user_number
+		j = 0
+		while j < i
+			print "#"
+			j = j + 1
+		end
+		puts "#"
+		i = i + 1
 	end
-	puts "#"
-	i = i + 1
+else
+	puts "Il fallait saisir un nombre entre 1 et 25"
 end
